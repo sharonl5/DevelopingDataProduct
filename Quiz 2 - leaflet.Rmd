@@ -1,0 +1,22 @@
+---
+title: "Quiz 2 -Leaflet"
+author: "Sharon L"
+date: "May 1, 2017"
+output:
+  html_document: default
+  word_document: default
+---
+
+## Create a web page using R Markdown that features a map created with Leaflet. 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+if (!require("leaflet")) {
+  install.packages("leaflet", repos="http://cran.rstudio.com/") 
+  library("leaflet")
+}
+
+my_map <- addMarkers(addTiles(leaflet()),lat = 42.3601, lng =-71.0589, popup = "My First Leaflet")
+my_map
+
+```
+
